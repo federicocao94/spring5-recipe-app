@@ -125,23 +125,19 @@ public class DataLoader implements ApplicationListener<ContextRefreshedEvent> {
 				+ " a 1/4 cup of salsa and mix it in with your mashed avocados.");
 		
 		guac.setNotes(guacNotes);
-		guacNotes.setRecipe(guac);
 		
-		guac.getIngredients().add(new Ingredient("ripe avocados", 
+		guac.addIngredient(new Ingredient("ripe avocados", new BigDecimal(2), eachUom, guac));
+		guac.addIngredient(new Ingredient("Kosher salt", new BigDecimal(0.5), teaSpoonUom, guac));
+		guac.addIngredient(new Ingredient("fresh lime juice or lemon juice", 
+				new BigDecimal(2), tableSpoonUom, guac));
+		guac.addIngredient(new Ingredient("minced red onion or thinly sliced green onion", 
+				new BigDecimal(2), tableSpoonUom, guac));
+		guac.addIngredient(new Ingredient("serrano chiles, stems and seeds removed, minced", 
 				new BigDecimal(2), eachUom, guac));
-		guac.getIngredients().add(new Ingredient("Kosher salt", 
-				new BigDecimal(0.5), teaSpoonUom, guac));
-		guac.getIngredients().add(new Ingredient("fresh lime juice or lemon juice", 
-				new BigDecimal(2), tableSpoonUom, guac));
-		guac.getIngredients().add(new Ingredient("minced red onion or thinly sliced green onion", 
-				new BigDecimal(2), tableSpoonUom, guac));
-		guac.getIngredients().add(new Ingredient("serrano chiles, stems and seeds removed, minced", 
-				new BigDecimal(2), eachUom, guac));
-		guac.getIngredients().add(new Ingredient("cilantro", 
-				new BigDecimal(2), tableSpoonUom, guac));
-		guac.getIngredients().add(new Ingredient("reshly grated black pepper", 
+		guac.addIngredient(new Ingredient("cilantro", new BigDecimal(2), tableSpoonUom, guac));
+		guac.addIngredient(new Ingredient("reshly grated black pepper", 
 				new BigDecimal(2), dashUom, guac));
-		guac.getIngredients().add(new Ingredient("tomato, seeds and pulp removed, chopped", 
+		guac.addIngredient(new Ingredient("tomato, seeds and pulp removed, chopped", 
 				new BigDecimal(0.5), eachUom, guac));
 		
 		guac.getCategories().add(americanCategory);
